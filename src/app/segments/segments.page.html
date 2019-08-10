@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>segments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<!-- Segment with secondary color -->
+<ion-segment (ionChange)="segmentChanged($event)" color="dark">
+  <ion-segment-button value="local 1">
+    <ion-label>Grand-Place</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="local 2">
+    <ion-label>Catedral</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="local 4">
+    <ion-label>Canais</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-segment (ionChange)="segmentChanged($event)" color="warning">
+  <ion-segment-button value="local 3">
+    <ion-label>Campos de Batalha</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="local 5">
+    <ion-label>Praça do Mercado</ion-label>
+  </ion-segment-button>
+</ion-segment>
+{{texto}}
+<div *ngIf="habilitaimg">
+  <ion-img src="../assets/img/{{imagem}}"></ion-img>
+</div>
+<ion-button expand="full" href="home" color="danger">Voltar</ion-button>
+</ion-content>
+
